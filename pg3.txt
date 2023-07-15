@@ -1,4 +1,3 @@
-3.Program to draw a color cube and spin it using OpenGL transformation matrices.
 #include <stdlib.h> 
 #include <GL/glut.h>
 GLfloat vertices[][3] = {{-1,-1,-1},{1,-1,-1},{1,1,-1},{-1,1,-1},
@@ -66,7 +65,7 @@ glOrtho(-2.0 * (GLfloat) w / (GLfloat) h,
 2.0 * (GLfloat) w / (GLfloat) h, -2.0, 2.0, -10.0, 10.0);
 glMatrixMode(GL_MODELVIEW);
 }
-void main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 glutInit(&argc, argv);
 glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH); 
@@ -76,6 +75,6 @@ glutReshapeFunc(myReshape);
 glutDisplayFunc(display); 
 glutIdleFunc(spinCube); 
 glutMouseFunc(mouse);
-glEnable(GL_DEPTH_TEST); /* Enable hidden--surface--removal */ 
+glEnable(GL_DEPTH_TEST);
 glutMainLoop();
 }

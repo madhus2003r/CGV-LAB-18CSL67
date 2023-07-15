@@ -1,7 +1,8 @@
 #include <stdlib.h> 
 #include <stdio.h> 
 #include <GL/glut.h>
-float point v[][3]={{0.0, 0.0, 0.0}, {0.0, 1.0, -1.0},{-1.0, -1.0, -1.0},
+typedef GLfloat point[3];
+float v[][3]={{0.0, 0.0, 0.0}, {0.0, 1.0, -1.0},{-1.0, -1.0, -1.0},
 {1.0, -1.0, -1.0}};
 int n;
 void triangle( point a, point b, point c)
